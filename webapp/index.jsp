@@ -1,19 +1,8 @@
-<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <html>
 <body>
-<h2>Product List</h2>
-<ul>
-    <%
-        ArrayList <String> list=new ArrayList<String>();
-        list.add("Product 1");
-        list.add("Product 2");
-        list.add("Product 3");
-        list.add("Product 4");
-        list.add("Product 5");
-        for(String pdt:list){
-            out.println("<li>"+pdt+"</li>");
-        }
-    %>
-</ul>
+    <p>Current Date and Time</p>
+    <p><%= new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date()) %></p>
 </body>
 </html>
